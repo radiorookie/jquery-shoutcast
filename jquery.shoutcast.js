@@ -35,7 +35,7 @@
    * @return {SHOUTcast}      return this for chaining.
    */
   SHOUTcast.prototype.stats = function(fn){
-    var that = this,r,url = 'http://'+this.host+':'+this.port+'/'+this.stats_path+'?sid='+this.stream+'&json=1';
+    var that = this,r,url = location.protocol+'//'+this.host+':'+this.port+'/'+this.stats_path+'?sid='+this.stream+'&json=1';
     fn = fn || function(){};
     r = $.ajax({
       url : url,
